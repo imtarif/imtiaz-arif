@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Prof. Imtiaz Arif — Dean, Faculty of Management Sciences at DHA Suffa University, Karachi. Research in finance, financial risk, technology, innovation and economic growth.">
+  <meta name="theme-color" content="#10251f">
+  <title>Prof. Imtiaz Arif | Academic Leader & Researcher</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #17251f;
+      --muted: #627169;
+      --paper: #f7f7f2;
+      --white: #fff;
+      --green: #174b38;
+      --green-2: #23674d;
+      --sage: #e8eee8;
+      --gold: #b88b4a;
+      --line: #dfe5dd;
+      --max: 1120px;
+      --serif: "Playfair Display", Georgia, serif;
+      --sans: "DM Sans", system-ui, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 86px; }
+    body { font-family: var(--sans); color: var(--ink); background: var(--paper); line-height: 1.7; font-size: 16px; }
+    a { color: var(--green-2); }
+    .wrap { width: min(var(--max), calc(100% - 48px)); margin: 0 auto; }
+    .topbar { position: sticky; top: 0; z-index: 20; background: rgba(247,247,242,.94); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+    .nav { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { font: 600 20px var(--serif); color: var(--ink); text-decoration: none; white-space: nowrap; }
+    .nav-links { display: flex; align-items: center; gap: 26px; list-style: none; }
+    .nav-links a { color: var(--muted); font-size: 13px; font-weight: 700; letter-spacing: .02em; text-decoration: none; }
+    .nav-links a:hover { color: var(--green-2); }
+    .menu-toggle { display: none; border: 1px solid var(--line); background: var(--white); border-radius: 8px; padding: 8px 11px; font-size: 20px; cursor: pointer; color: var(--ink); }
+    .hero { position: relative; overflow: hidden; background: var(--ink); color: #f7f7f2; padding: 100px 0 92px; }
+    .hero::after { content: ""; position: absolute; width: 520px; height: 520px; border: 1px solid rgba(255,255,255,.12); border-radius: 50%; right: -130px; top: -210px; box-shadow: 0 0 0 55px rgba(255,255,255,.025), 0 0 0 110px rgba(255,255,255,.02); }
+    .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 270px; gap: 70px; align-items: center; }
+    .eyebrow { color: #c6a36e; text-transform: uppercase; letter-spacing: .18em; font-size: 11px; font-weight: 700; margin-bottom: 20px; }
+    h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.2; }
+    h1 { font-size: clamp(42px, 6vw, 68px); letter-spacing: -.035em; margin-bottom: 16px; }
+    .hero-role { color: #d0d9d2; font-size: 19px; margin-bottom: 22px; }
+    .hero-copy { max-width: 700px; color: #c3cec6; font-size: 16px; }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 32px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 12px 19px; border-radius: 5px; font-size: 13px; font-weight: 700; text-decoration: none; transition: .2s ease; }
+    .btn-primary { background: #d1ad75; color: #17251f; border: 1px solid #d1ad75; }
+    .btn-outline { color: #f7f7f2; border: 1px solid rgba(255,255,255,.4); }
+    .btn:hover { transform: translateY(-2px); }
+    .monogram { width: 230px; height: 230px; border-radius: 50%; display: grid; place-items: center; justify-self: center; border: 1px solid rgba(209,173,117,.7); box-shadow: 0 0 0 14px rgba(255,255,255,.035), inset 0 0 50px rgba(255,255,255,.04); color: #d1ad75; font: 600 76px var(--serif); letter-spacing: -.06em; }
+    .hero-meta { display: flex; gap: 28px; flex-wrap: wrap; margin-top: 42px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.16); }
+    .hero-meta span { color: #c3cec6; font-size: 12px; }
+    .hero-meta strong { color: #fff; display: block; font-size: 14px; }
+    section { padding: 82px 0; border-bottom: 1px solid var(--line); }
+    .section-kicker { color: var(--green-2); font-size: 11px; text-transform: uppercase; letter-spacing: .17em; font-weight: 700; margin-bottom: 10px; }
+    h2 { font-size: clamp(30px, 4vw, 42px); letter-spacing: -.025em; margin-bottom: 28px; }
+    h3 { font-size: 20px; }
+    .intro-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 64px; align-items: start; }
+    .intro-copy p + p { margin-top: 17px; }
+    .highlight-panel { background: var(--sage); padding: 30px; border-radius: 8px; border: 1px solid #dbe5db; }
+    .highlight-panel h3 { margin-bottom: 18px; }
+    .metrics { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .metric strong { display: block; font: 600 34px var(--serif); color: var(--green); }
+    .metric span { color: var(--muted); font-size: 12px; }
+    .note { color: var(--muted); font-size: 12px; margin-top: 16px; }
+    .experience-list { border-left: 1px solid #cbd7cb; margin-left: 8px; padding-left: 30px; }
+    .experience-item { position: relative; padding: 0 0 34px; }
+    .experience-item:last-child { padding-bottom: 0; }
+    .experience-item::before { content: ""; position: absolute; left: -36px; top: 7px; width: 11px; height: 11px; border-radius: 50%; background: var(--paper); border: 2px solid var(--green-2); }
+    .experience-item h3 { font: 700 17px var(--sans); }
+    .experience-item .org { color: var(--green-2); font-weight: 600; font-size: 14px; }
+    .date { color: var(--muted); font-size: 12px; margin: 3px 0 8px; }
+    .experience-item p { color: var(--muted); font-size: 14px; max-width: 850px; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 54px; }
+    .education-item { padding: 19px 0; border-top: 1px solid var(--line); }
+    .education-item:last-child { border-bottom: 1px solid var(--line); }
+    .education-item h3 { font: 700 16px var(--sans); }
+    .education-item p { color: var(--muted); font-size: 13px; }
+    .research-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .research-card { background: var(--white); border: 1px solid var(--line); border-radius: 7px; padding: 24px; min-height: 185px; }
+    .research-card .num { color: var(--gold); font: 600 14px var(--serif); margin-bottom: 16px; }
+    .research-card h3 { font-size: 19px; margin-bottom: 10px; }
+    .research-card p { color: var(--muted); font-size: 13px; }
+    .pub-list { list-style: none; }
+    .pub-list li { display: grid; grid-template-columns: 58px 1fr; gap: 20px; padding: 19px 0; border-top: 1px solid var(--line); }
+    .pub-list li:last-child { border-bottom: 1px solid var(--line); }
+    .pub-year { font: 600 17px var(--serif); color: var(--green-2); }
+    .pub-title { font-weight: 700; font-size: 14px; line-height: 1.5; }
+    .pub-meta { color: var(--muted); font-size: 12px; margin-top: 4px; }
+    .publication-note { color: var(--muted); font-size: 13px; margin-top: 20px; }
+    .editor-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    .editor-card { background: var(--white); border: 1px solid var(--line); padding: 20px; border-radius: 6px; }
+    .editor-card h3 { font: 700 15px var(--sans); }
+    .editor-card p { color: var(--muted); font-size: 12px; }
+    .supervision { background: var(--sage); }
+    .supervision-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 42px; }
+    .supervision p { color: var(--muted); font-size: 14px; }
+    .supervision strong { color: var(--ink); }
+    .contact { background: var(--ink); color: #f7f7f2; border: 0; }
+    .contact h2 { color: #fff; }
+    .contact .section-kicker { color: #d1ad75; }
+    .contact-grid { display: grid; grid-template-columns: 1.1fr 1fr 1fr; gap: 28px; }
+    .contact-label { text-transform: uppercase; letter-spacing: .15em; color: #9eafa4; font-size: 10px; font-weight: 700; margin-bottom: 8px; }
+    .contact a { color: #d9bd91; text-decoration: none; overflow-wrap: anywhere; }
+    .contact p { color: #d0d9d2; font-size: 14px; }
+    footer { background: #101b17; color: #9eafa4; padding: 22px 0; font-size: 12px; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    @media (max-width: 850px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 42px; }
+      .monogram { grid-row: 1; width: 150px; height: 150px; font-size: 52px; justify-self: start; }
+      .intro-grid, .two-col { grid-template-columns: 1fr; gap: 36px; }
+      .research-grid { grid-template-columns: repeat(2, 1fr); }
+      .nav-links { display: none; position: absolute; top: 71px; left: 0; right: 0; background: var(--paper); padding: 14px 24px 20px; border-bottom: 1px solid var(--line); flex-direction: column; align-items: flex-start; gap: 16px; }
+      .nav-links.open { display: flex; }
+      .menu-toggle { display: block; }
+    }
+    @media (max-width: 560px) {
+      .wrap { width: min(100% - 34px, var(--max)); }
+      .hero { padding: 65px 0 58px; }
+      section { padding: 60px 0; }
+      .research-grid, .editor-grid, .supervision-grid, .contact-grid { grid-template-columns: 1fr; }
+      .pub-list li { grid-template-columns: 1fr; gap: 4px; }
+      .hero-meta { gap: 18px; }
+      .highlight-panel { padding: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <nav class="nav wrap" aria-label="Main navigation">
+      <a class="brand" href="#home">Prof. Imtiaz Arif</a>
+      <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <ul class="nav-links">
+        <li><a href="#about">Profile</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <header class="hero" id="home">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">Professor · Academic Leader · Researcher</div>
+        <h1>Prof. Imtiaz Arif</h1>
+        <p class="hero-role">Dean, Faculty of Management Sciences<br>DHA Suffa University, Karachi</p>
+        <p class="hero-copy">An academic leader and researcher with more than 25 years of higher-education experience, over 65 refereed journal publications, and a research focus spanning financial risk and stability, finance, technology, innovation and economic growth.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#publications">Explore research</a>
+          <a class="btn btn-outline" href="#contact">Contact</a>
+        </div>
+        <div class="hero-meta">
+          <span><strong>25+ years</strong>Higher education experience</span>
+          <span><strong>65+ papers</strong>Blind peer-reviewed journals</span>
+          <span><strong>1,950+</strong>Research citations/references reported in CV</span>
+        </div>
+      </div>
+      <div class="monogram" aria-label="Imtiaz Arif initials">IA</div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about">
+      <div class="wrap intro-grid">
+        <div class="intro-copy">
+          <div class="section-kicker">Academic profile</div>
+          <h2>Leadership grounded in scholarship.</h2>
+          <p>Prof. Imtiaz Arif is a Professor and Dean of the Faculty of Management Sciences at DHA Suffa University, Karachi. His career in higher education includes academic, administrative and strategic leadership, faculty development, programme and curriculum oversight, institutional planning, accreditation, and research management.</p>
+          <p>Before joining DHA Suffa University, he served at Iqra University from January 2000 to December 2024 in roles including Campus Director, Associate Dean and academic staff member. His work has included establishing and operationalising the Gulshan Campus, contributing to university ranking initiatives, and leading academic and administrative operations.</p>
+          <p>As a researcher, his work examines financial markets, financial development, banking, economic policy, and the ways technology and innovation influence organisations, consumers and society.</p>
+        </div>
+        <aside class="highlight-panel">
+          <h3>At a glance</h3>
+          <div class="metrics">
+            <div class="metric"><strong>25+</strong><span>Years in higher education</span></div>
+            <div class="metric"><strong>65+</strong><span>Refereed journal papers</span></div>
+            <div class="metric"><strong>1,950+</strong><span>Research citations/references noted in CV</span></div>
+            <div class="metric"><strong>3</strong><span>Academic journal leadership roles and appointments</span></div>
+          </div>
+          <p class="note">Figures are taken from the supplied CV.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="wrap">
+        <div class="section-kicker">Career</div>
+        <h2>Academic &amp; leadership experience</h2>
+        <div class="experience-list">
+          <article class="experience-item">
+            <h3>Dean, Faculty of Management Sciences</h3>
+            <div class="org">DHA Suffa University, Karachi</div>
+            <div class="date">February 2026 – Present</div>
+            <p>Providing academic, administrative and strategic leadership for the faculty, with a focus on academic quality, programme development, institutional growth, research and innovation.</p>
+          </article>
+          <article class="experience-item">
+            <h3>Dean, Faculty of Management &amp; Social Sciences</h3>
+            <div class="org">DHA Suffa University, Karachi</div>
+            <div class="date">February 2025 – January 2026</div>
+            <p>Led academic programmes and faculty operations; supported curriculum relevance, faculty recruitment and development, accreditation, strategic planning, partnerships, research and student employability.</p>
+          </article>
+          <article class="experience-item">
+            <h3>Campus Director · Associate Dean · Academic Staff Member</h3>
+            <div class="org">Iqra University, Karachi</div>
+            <div class="date">January 2000 – December 2024</div>
+            <p>Led campus operations, annual and strategic planning, faculty recruitment, academic strategy, budgeting, accreditation and research activities. Contributed to QS and Times Higher Education ranking initiatives and successful BBA and MBA programme accreditation.</p>
+          </article>
+          <article class="experience-item">
+            <h3>Tutor</h3>
+            <div class="org">Victoria University of Wellington, New Zealand</div>
+            <div class="date">March 2012 – July 2013</div>
+            <p>Prepared and delivered lectures, supported students with course-related queries, assessed coursework and managed Blackboard activities.</p>
+          </article>
+          <article class="experience-item">
+            <h3>Lecturer</h3>
+            <div class="org">Government National College, Government of Sindh, Karachi</div>
+            <div class="date">1993 – 1999</div>
+          </article>
+          <article class="experience-item">
+            <h3>Lecturer</h3>
+            <div class="org">PAF College, Malir Cantt, Karachi</div>
+            <div class="date">1991 – 1993</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="wrap two-col">
+        <div>
+          <div class="section-kicker">Academic qualifications</div>
+          <h2>Education</h2>
+          <div class="education-item"><h3>Ph.D. in Finance</h3><p>Iqra University, Karachi · Thesis: Essays on Linkages between Terrorism and Stock Market Movement</p></div>
+          <div class="education-item"><h3>PGCert in Finance</h3><p>Victoria University of Wellington · 2012</p></div>
+          <div class="education-item"><h3>M.Phil. in Finance</h3><p>Iqra University, Karachi · Thesis: Impact of Mutual Fund Managers’ Human Capital on Funds Performance</p></div>
+          <div class="education-item"><h3>M.S. in Computer Science</h3><p>SZABIST, Karachi · December 2004</p></div>
+          <div class="education-item"><h3>M.C.S. in Computer Science</h3><p>University of Karachi · July 2000</p></div>
+          <div class="education-item"><h3>M.Sc. in Physics</h3><p>University of Karachi · July 1991</p></div>
+        </div>
+        <div>
+          <div class="section-kicker">Teaching &amp; supervision</div>
+          <h2>Teaching expertise</h2>
+          <p>Teaching areas include Statistics for Business and Finance, Business Finance, Corporate Finance, Computational Finance, Quantitative Techniques for Research in Finance, and Research Methods for Business.</p>
+          <p style="margin-top:16px">Research and analytical tools named in the CV include R, STATA, MATLAB, EViews and SPSS. Additional teaching interests include artificial intelligence in business, IT in business, technology in finance, behavioural finance, uncertainty and financial-market movements.</p>
+          <p style="margin-top:16px">PhD and postgraduate supervision includes support with topic identification, literature review, research design, data analysis, interpretation and thesis development.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="research">
+      <div class="wrap">
+        <div class="section-kicker">Scholarly focus</div>
+        <h2>Research interests</h2>
+        <div class="research-grid">
+          <article class="research-card"><div class="num">01 / FINANCE</div><h3>Financial Risk &amp; Stability</h3><p>Credit risk, default prediction, financial resilience, asset pricing and financial-market behaviour.</p></article>
+          <article class="research-card"><div class="num">02 / MARKETS</div><h3>Behavioural Finance</h3><p>Financial literacy, investment decisions, behavioural biases and the role of human capital in financial performance.</p></article>
+          <article class="research-card"><div class="num">03 / ECONOMICS</div><h3>Growth &amp; Economic Policy</h3><p>Financial development, capital flows, FDI, economic growth, policy uncertainty and institutional governance.</p></article>
+          <article class="research-card"><div class="num">04 / BANKING</div><h3>Banking &amp; Digital Finance</h3><p>Banking practices, Islamic finance, fintech adoption, digital finance and financial inclusion.</p></article>
+          <article class="research-card"><div class="num">05 / TECHNOLOGY</div><h3>Technology &amp; Innovation</h3><p>Artificial intelligence, technology adoption, digital platforms and technology-driven societal transformation.</p></article>
+          <article class="research-card"><div class="num">06 / BUSINESS</div><h3>Technology in Business</h3><p>Innovation and growth, consumer behaviour, digital commerce and technology applications in organisations.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="publications">
+      <div class="wrap">
+        <div class="section-kicker">Selected scholarship</div>
+        <h2>Selected journal publications</h2>
+        <ul class="pub-list">
+          <li><span class="pub-year">2026</span><div><div class="pub-title">Virtual Reality (VR): Deriving Factors Affecting Attitude towards Virtual Commerce</div><div class="pub-meta">Arif, I., Aslam, W., Farhat, K. &amp; Basit, A. · International Journal of Electronic Business</div></div></li>
+          <li><span class="pub-year">2026</span><div><div class="pub-title">In the Journey of Achieving Sustainable Banking Practices: The Contributors and Outcomes</div><div class="pub-meta">Farhat, K., Aslam, W. &amp; Arif, I. · International Journal of Ethics and Systems</div></div></li>
+          <li><span class="pub-year">2026</span><div><div class="pub-title">Explaining Green Future Purchase Intention of Household Appliances: A Perspective from a Developing Economy</div><div class="pub-meta">Aslam, W., Ham, W., Arif, I. &amp; Farhat, K. · International Journal of Sustainable Society, 18(2), 169–192 · DOI: 10.1504/IJSSOC.2026.10066907</div></div></li>
+          <li><span class="pub-year">2025</span><div><div class="pub-title">Corporate Governance Reforms and Financial Performance: Evidence from Pakistan’s Non-Financial Sector</div><div class="pub-meta">Arif, I., Moin, E. &amp; Alvi, J. · Pakistan Journal of Applied Economics, 35(2), 207–230</div></div></li>
+          <li><span class="pub-year">2025</span><div><div class="pub-title">Role of Locus of Control in Moderating Financial Literacy and Behavior in the Banking Sector</div><div class="pub-meta">Arif, I., Alvi, J. &amp; Wadood, A. · Journal of Finance &amp; Economics Research, 10(1) · DOI: 10.205047/jfer2510205</div></div></li>
+          <li><span class="pub-year">2024</span><div><div class="pub-title">Credit Scorecards &amp; Forecasting Default Events – A Novel Story of Non-financial Listed Companies in Pakistan</div><div class="pub-meta">Alvi, J. &amp; Arif, I. · Asia-Pacific Financial Markets, 32(4), 1459–1485 · DOI: 10.1007/s10690-024-09494-3</div></div></li>
+          <li><span class="pub-year">2024</span><div><div class="pub-title">Advancing Financial Resilience: A Systematic Review of Default Prediction Models and Future Directions in Credit Risk Management</div><div class="pub-meta">Alvi, J., Arif, I. &amp; Nizam, K. · Heliyon, 10(21) · DOI: 10.1016/j.heliyon.2024.e39770</div></div></li>
+          <li><span class="pub-year">2024</span><div><div class="pub-title">Default Prediction Modeling (DPM) with Machine Learning Algorithms: Case of Non-financial Listed Companies in Pakistan</div><div class="pub-meta">Alvi, J. &amp; Arif, I. · Kybernetes · DOI: 10.1108/K-09-2023-1888</div></div></li>
+          <li><span class="pub-year">2023</span><div><div class="pub-title">Technostress: A Catalyst to Leave the Teaching Profession — A Survey Designed to Measure Technostress among Teachers in Pakistan during COVID-19 Pandemic</div><div class="pub-meta">Siddiqui, S., Arif, I. &amp; Hinduja, P. · E-Learning and Digital Media, 20(1), 53–79 · DOI: 10.1177/20427530221107506</div></div></li>
+          <li><span class="pub-year">2020</span><div><div class="pub-title">Barriers in Adoption of Internet Banking: A Structural Equation Modeling–Neural Network Approach</div><div class="pub-meta">Arif, I., Aslam, W. &amp; Hwang, Y. · Technology in Society, 61 · DOI: 10.1016/j.techsoc.2020.101231</div></div></li>
+          <li><span class="pub-year">2017</span><div><div class="pub-title">Terrorism and Stock Market Nexus: New Evidence from Wavelet Analysis</div><div class="pub-meta">Arif, I. · South Asian Journal of Management Sciences, 11(2), 95–108 · DOI: 10.21621/sajms.2017112.01</div></div></li>
+          <li><span class="pub-year">2017</span><div><div class="pub-title">Terrorism and Stock Market Linkages: An Empirical Study from Front-line State</div><div class="pub-meta">Arif, I. &amp; Suleman, T. · Global Business Review, 18(2), 365–378 · DOI: 10.1177/0972150916668604</div></div></li>
+        </ul>
+        <p class="publication-note">This is a selected list, not the complete bibliography. The supplied CV lists 66 refereed journal publications. For the full record, please consult the complete CV or the relevant journal databases.</p>
+      </div>
+    </section>
+
+    <section id="editorial">
+      <div class="wrap">
+        <div class="section-kicker">Academic service</div>
+        <h2>Editorial &amp; scholarly contributions</h2>
+        <div class="editor-grid">
+          <article class="editor-card"><h3>Founder &amp; Editor · Journal of Management Sciences</h3><p>2014–2024 · Established and led a blind peer-reviewed scholarly journal.</p></article>
+          <article class="editor-card"><h3>Founder &amp; Editor · Journal of Finance &amp; Economics Research</h3><p>2015–2016 · Established and edited a peer-reviewed research journal.</p></article>
+          <article class="editor-card"><h3>Managing Editor · Journal of Education and Social Sciences</h3><p>2013–2019 · Editorial management of research in education and social sciences.</p></article>
+          <article class="editor-card"><h3>Associate Editor · SAGE Open</h3><p>2017–2018 · Editorial service for an open-access, peer-reviewed journal.</p></article>
+        </div>
+        <p style="margin-top:24px;color:var(--muted);font-size:13px">The CV also records journal reviewing for publications including Finance Research Letters, Economic Modelling, Kybernetes, Behaviour &amp; Information Technology, and International Journal of Islamic and Middle Eastern Finance and Management. Professional memberships include the American Economic Association (AEA), American Finance Association (AFA), and Financial Management Association (FMA).</p>
+      </div>
+    </section>
+
+    <section class="supervision" id="supervision">
+      <div class="wrap">
+        <div class="section-kicker">Research mentorship</div>
+        <h2>Postgraduate research supervision</h2>
+        <div class="supervision-grid">
+          <div><h3>PhD supervision</h3><p style="margin-top:10px"><strong>Research area:</strong> Predicting credit default in non-financial listed firms in Pakistan using machine-learning algorithms and artificial intelligence.</p></div>
+          <div><h3>MPhil supervision</h3><p style="margin-top:10px">Supervision across research topics including stock-market behaviour, digital finance and women’s financial literacy, banking performance, terrorism and FDI, monetary policy, financial development, corporate governance, financial capability, enterprise risk management and AI-powered educational and retail chatbots.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap">
+        <div class="section-kicker">Get in touch</div>
+        <h2>Contact &amp; professional details</h2>
+        <div class="contact-grid">
+          <div><div class="contact-label">Office</div><p>DHA Suffa University<br>DHA Phase 7, Near Khayaban-e-Ittehad<br>Karachi, Pakistan</p></div>
+          <div><div class="contact-label">Email &amp; phone</div><p><a href="mailto:imtiaz.arif@gmail.com">imtiaz.arif@gmail.com</a><br><a href="tel:+923218221688">+92 321 8221688</a></p></div>
+          <div><div class="contact-label">Research identifiers</div><p>ORCID: <a href="https://orcid.org/0000-0002-0102-5870" target="_blank" rel="noopener">0000-0002-0102-5870</a><br>Web of Science ResearcherID: F-4366-2015</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner"><span>© <span id="year"></span> Prof. Imtiaz Arif</span><span>Academic leadership · Finance · Research</span></div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    const toggle = document.querySelector(".menu-toggle");
+    const links = document.querySelector(".nav-links");
+    toggle.addEventListener("click", () => {
+      const isOpen = links.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", String(isOpen));
+    });
+    links.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
+      links.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
+    }));
+  </script>
+</body>
+</html>
