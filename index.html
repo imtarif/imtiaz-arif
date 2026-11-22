@@ -49,7 +49,16 @@
     .btn-primary { background: #d1ad75; color: #17251f; border: 1px solid #d1ad75; }
     .btn-outline { color: #f7f7f2; border: 1px solid rgba(255,255,255,.4); }
     .btn:hover { transform: translateY(-2px); }
-    .monogram { width: 230px; height: 230px; border-radius: 50%; display: grid; place-items: center; justify-self: center; border: 1px solid rgba(209,173,117,.7); box-shadow: 0 0 0 14px rgba(255,255,255,.035), inset 0 0 50px rgba(255,255,255,.04); color: #d1ad75; font: 600 76px var(--serif); letter-spacing: -.06em; }
+    .profile-photo {
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 25%;
+  justify-self: center;
+  border: 3px solid #d1ad75;
+  box-shadow: 0 0 0 14px rgba(255,255,255,.035);
+}
     .hero-meta { display: flex; gap: 28px; flex-wrap: wrap; margin-top: 42px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.16); }
     .hero-meta span { color: #c3cec6; font-size: 12px; }
     .hero-meta strong { color: #fff; display: block; font-size: 14px; }
@@ -109,7 +118,12 @@
     .footer-inner { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
     @media (max-width: 850px) {
       .hero-grid { grid-template-columns: 1fr; gap: 42px; }
-      .monogram { grid-row: 1; width: 150px; height: 150px; font-size: 52px; justify-self: start; }
+      .profile-photo {
+  grid-row: 1;
+  width: 150px;
+  height: 150px;
+  justify-self: start;
+}
       .intro-grid, .two-col { grid-template-columns: 1fr; gap: 36px; }
       .research-grid { grid-template-columns: repeat(2, 1fr); }
       .nav-links { display: none; position: absolute; top: 71px; left: 0; right: 0; background: var(--paper); padding: 14px 24px 20px; border-bottom: 1px solid var(--line); flex-direction: column; align-items: flex-start; gap: 16px; }
@@ -161,7 +175,11 @@
           <span><strong>1,950+</strong>Research citations/references reported in CV</span>
         </div>
       </div>
-      <div class="monogram" aria-label="Imtiaz Arif initials">IA</div>
+      <img
+  src="imtiaz-arif-photo.jpg"
+  alt="Prof. Imtiaz Arif"
+  class="profile-photo"
+>
     </div>
   </header>
 
@@ -247,7 +265,7 @@
           <div class="section-kicker">Teaching &amp; supervision</div>
           <h2>Teaching expertise</h2>
           <p>Teaching areas include Statistics for Business and Finance, Business Finance, Corporate Finance, Computational Finance, Quantitative Techniques for Research in Finance, and Research Methods for Business.</p>
-          <p style="margin-top:16px">Research and analytical tools named in the CV include R, STATA, MATLAB, EViews and SPSS. Additional teaching interests include artificial intelligence in business, IT in business, technology in finance, behavioural finance, uncertainty and financial-market movements.</p>
+          <p style="margin-top:16px">Research and analytical tools used are SemWise, R, STATA, MATLAB, EViews and SPSS. Additional teaching interests include artificial intelligence in business, IT in business, technology in finance, behavioural finance, uncertainty and financial-market movements.</p>
           <p style="margin-top:16px">PhD and postgraduate supervision includes support with topic identification, literature review, research design, data analysis, interpretation and thesis development.</p>
         </div>
       </div>
